@@ -1,0 +1,47 @@
+body {
+    background: rgb(200, 248, 222);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(5, 104, 5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 5px dotted #17cf36;
+    border-radius: 50px;
+}
+
+label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(21, 100, 80);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+input:focus {
+    border: 2px solid rgb(157, 161, 159);
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+#btn {
+    background-color: rgb(8, 124, 105);
+    color: rgb(236, 245, 179);
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: 3px 5px;
+    border-radius: 12px;
+    border: 2px solid rgb(226, 230, 186);
+    transition-duration: 0.3s;
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.19);
+}
+
+#btn:hover {
+    background-color: rgb(200, 248, 222);
+    color: rgb(40, 145, 127);
+    border: 2px solid  rgb(55, 177, 156);
+}
