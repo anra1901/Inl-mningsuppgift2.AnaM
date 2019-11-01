@@ -1,9 +1,20 @@
 body {
     background: rgb(200, 248, 222);
-    text-align: center;
+}
+
+form {
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+select {
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
 }
 
 h1 {
+    text-align: center;
     color: rgb(5, 104, 5);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
@@ -25,6 +36,10 @@ input:focus {
 
 input {
     border-radius: 5px;
+    padding-left: 3px;
+    width: 250px;
+    padding-bottom: 4px;
+    font-size: 100%;
 }
 
 #btn {
@@ -34,6 +49,9 @@ input {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor: pointer;
     padding: 3px 5px;
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 40px;
     border-radius: 12px;
     border: 2px solid rgb(226, 230, 186);
     transition-duration: 0.3s;
@@ -44,4 +62,19 @@ input {
     background-color: rgb(200, 248, 222);
     color: rgb(40, 145, 127);
     border: 2px solid  rgb(55, 177, 156);
+}
+
+#countries {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color:black;
+    padding-top: 30px;
+}
+
+li {
+    width: 250px;
+}
+
+.removeBtn {
+    float: right;
 }

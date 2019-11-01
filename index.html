@@ -9,16 +9,29 @@
 
 <body>
     <h1>Countries I Want To Visit! 🌍</h1>
-    <label>Country:</label>
-    <input type="text" id="country">
-    <br>
-    <br>
-    <label>Filter:</label>
-    <input type="text" id="filter">
-    <br>
-    <br>
-    <button id="btn">Add to list</button>
-    <ul id="countries"></ul>
+    <form id="add">
+        <label>Country:</label>
+        <br>
+        <input type="text" id="country">
+        <br>
+        <select>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="africa">Africa</option>
+            <option value="northAmerica">North America</option>
+            <option value="southAmerica">South America</option>
+            <option value="oceania">Oceania</option>
+        </select>
+        <br>
+        <br>
+        <button id="btn">Add to list</button>
+        <br>
+        <label>Filter:</label>
+        <br>
+        <input type="text" id="filter">
+        <br>
+        <ul id="countries"></ul>
+    </form>
     <script type="application/javascript" src="main.js"></script>
 </body>
 
