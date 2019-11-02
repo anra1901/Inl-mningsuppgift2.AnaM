@@ -71,8 +71,18 @@ input {
     padding-top: 30px;
 }
 
+table {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+}
+
+th {
+    text-decoration: underline;
+}
+
 li {
-    width: 250px;
+    width: 200px;
 }
 
 .removeBtn {

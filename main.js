@@ -1,15 +1,17 @@
 const country = document.querySelector("#country")
 const filter = document.querySelector("#filter")
-// const option = document.querySelector("select")
+const option = document.querySelector("select")
 const add = document.querySelector("#add")
 const countryList = document.querySelector("#countries")
-const listOfCountries = ["France", "Italy", "Germany"]
+const listOfCountries = ["France", "Singapore", "Paraguay"]
 const removeBtn = document.querySelector(".removeBtn")
 
 add.addEventListener("submit", event => {
     event.preventDefault()
     if (country.value !== "") {
-        listOfCountries.push(country.value)
+        if (continentIsSelected()) {
+            listOfCountries.push(country.value /*+ "    " + option.value*/)
+        }
     } else {
         alert("Please insert a country!")
     }
@@ -17,7 +19,15 @@ add.addEventListener("submit", event => {
     drawList(listOfCountries)
 })
 
-function drawList(arr) {
+const continentIsSelected = () => {
+    if (option.value === "selectContinent") {
+        alert("Select a continent from the list!")
+        return false
+    }
+    return true
+}
+
+const drawList = arr => {
     countryList.innerHTML = ""
     arr.forEach(x => {
         const li = document.createElement("li")
@@ -31,9 +41,10 @@ function drawList(arr) {
         li.appendChild(removeBtn)
         countryList.appendChild(li)
     })
-} drawList(listOfCountries)
+} 
+drawList(listOfCountries)
 
-function removeCountry(x) {
+const removeCountry = x => {
     const index = listOfCountries.indexOf(x)
     listOfCountries.splice(index, 1)
     drawList(listOfCountries)
