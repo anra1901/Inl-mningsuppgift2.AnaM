@@ -80,7 +80,7 @@ h2 {
 }
 
 li {
-    width: 100%;
+    width: 70%;
 }
 
 .countrySpan {
@@ -89,10 +89,11 @@ li {
 }
 
 .continentSpan {
+    font-size: smaller;
     display: inline-block;
     width: 30%;
 }
 
 .removeBtn {
-    float: right;
+    float: inline-start;
 }
