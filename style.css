@@ -68,21 +68,29 @@ input {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: medium;
     color:black;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
-table {
-    font-size: 20px;
+h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(7, 68, 53);
+    font-weight: bolder;
     margin-top: 50px;
-}
-
-th {
-    text-decoration: underline;
+    margin-bottom: 0px;
 }
 
 li {
-    width: 200px;
+    width: 100%;
+}
+
+.countrySpan {
+    display: inline-block;
+    width: 30%;
+}
+
+.continentSpan {
+    display: inline-block;
+    width: 30%;
 }
 
 .removeBtn {
