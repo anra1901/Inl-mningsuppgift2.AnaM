@@ -12,10 +12,10 @@
     <form id="add">
         <label>Country:</label>
         <br>
-        <input type="text" id="country">
+        <input type="text" id="country" autofocus>
         <br>
         <select>
-            <option value="selectContinent" selected>-Select continent-</option>
+            <option value="selectContinent" selected disabled hidden>-Select continent-</option>
             <option value="Europe">Europe</option>
             <option value="Asia">Asia</option>
             <option value="Africa">Africa</option>
@@ -25,12 +25,21 @@
         </select>
         <br>
         <br>
-        <button id="btn">Add to list</button>
+        <input type="submit" id="btn" value="Add to list">
         <br>
         <label>Filter:</label>
         <br>
         <input type="text" id="filter">
         <br>
+        <div id="cathegoryDiv">
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="all" checked >All
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="europe">Europe
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="asia">Asia
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="africa">Africa<br>
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="north america">North America
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="south america">South America
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="oceania">Oceania
+        </div>
         <h2>List of countries:</h2>
         <ul id="countries"></ul>
         <ul id="continents"></ul>
