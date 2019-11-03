@@ -4,22 +4,24 @@ const option = document.querySelector("select")
 const add = document.querySelector("#add")
 const countryList = document.querySelector("#countries")
 const continentList = document.querySelector("#continents")
-const listOfCountries = ["France", "Singapore", "Paraguay"]
-const listOfContinents = ["Europe", "Asia", "South America"]
+const listOfCountryContinent = [
+    {country: "France", continent: "Europe"},
+    {country: "Singapore", continent: "Asia"},
+    {country: "Paraguay", continent: "South America"}
+]
 const removeBtn = document.querySelector(".removeBtn")
 
 add.addEventListener("submit", event => {
     event.preventDefault()
     if (country.value !== "") {
         if (continentIsSelected()) {
-            listOfCountries.push(country.value)
-            listOfContinents.push(option.value)
+            listOfCountryContinent.push({country: country.value, continent: option.value})
         }
     } else {
         alert("Please insert a country!")
     }
     country.value = ""
-    drawList(listOfCountries)
+    drawList(listOfCountryContinent)
 })
 
 function continentIsSelected() {
@@ -32,19 +34,19 @@ function continentIsSelected() {
 
 function drawList(arr) {
     countryList.innerHTML = ""
-    arr.forEach(x => {
+    arr.forEach(obj => {
         const li = document.createElement("li")
         const countrySpan = document.createElement("span")
         countrySpan.className = "countrySpan"
-        countrySpan.textContent = x
+        countrySpan.textContent = obj.country
         const continentSpan = document.createElement("span")
         continentSpan.className = "continentSpan"
-        continentSpan.textContent = listOfContinents[arr.indexOf(x)]
+        continentSpan.textContent = obj.continent
         const removeBtn = document.createElement("button")
         removeBtn.className = "removeBtn"
         removeBtn.textContent = "🗑️"
         removeBtn.addEventListener("click", () => {
-            removeCountry(x)
+            removeCountry(obj)
         })
         li.appendChild(countrySpan)
         li.appendChild(continentSpan)
@@ -52,19 +54,18 @@ function drawList(arr) {
         countryList.appendChild(li)
     })
 }
-drawList(listOfCountries)
+drawList(listOfCountryContinent)
 
 function removeCountry(x) {
-    const index = listOfCountries.indexOf(x)
-    listOfCountries.splice(index, 1)
-    listOfContinents.splice(index, 1)
-    drawList(listOfCountries)
+    const index = listOfCountryContinent.indexOf(x)
+    listOfCountryContinent.splice(index, 1)
+    drawList(listOfCountryContinent)
 }
 
 filter.addEventListener("input", event => {
     const searchFor = event.currentTarget.value.toLowerCase()
-    const filteredCountries = listOfCountries.filter(country => {
-        return country.toLowerCase().includes(searchFor)
+    const filteredCountries = listOfCountryContinent.filter(obj => {
+        return obj.country.toLowerCase().includes(searchFor)
     })
     drawList(filteredCountries)
 })
