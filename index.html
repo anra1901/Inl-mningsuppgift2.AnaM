@@ -14,6 +14,7 @@
         <br>
         <input type="text" id="country" autofocus>
         <br>
+        <input type="date" id="theDate" name="trip-start">
         <select>
             <option value="selectContinent" selected disabled hidden>-Select continent-</option>
             <option value="Europe">Europe</option>
@@ -32,7 +33,7 @@
         <input type="text" id="filter">
         <br>
         <div id="cathegoryDiv">
-            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="all" checked >All
+            <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="all" checked>All
             <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="europe">Europe
             <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="asia">Asia
             <input type="radio" name="cathegory" onclick="filterByContinent(this)" value="africa">Africa<br>
@@ -43,6 +44,7 @@
         <h2>List of countries:</h2>
         <ul id="countries"></ul>
         <ul id="continents"></ul>
+        <ul id="chosenDate"></ul>
     </form>
     <script type="application/javascript" src="main.js"></script>
 </body>

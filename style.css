@@ -7,9 +7,15 @@ form {
     padding-top: 30px;
 }
 
-select {
-    float: left;
+#theDate {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(75, 73, 73);
+    width: 140px;
+}
+
+select {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(59, 56, 56);
     margin-top: 10px;
 }
 
@@ -32,7 +38,7 @@ label {
 #country {
     border-radius: 5px;
     padding-left: 3px;
-    width: 250px;
+    width: 285px;
     padding-bottom: 4px;
     font-size: 100%;
 }¨
@@ -45,7 +51,7 @@ label {
 #filter {
     border-radius: 5px;
     padding-left: 3px;
-    width: 250px;
+    width: 285px;
     padding-bottom: 4px;
     font-size: 100%;
 }
@@ -55,19 +61,6 @@ label {
     border-radius: 5px;
 }
 
-/* input:focus {
-    border: 2px solid rgb(157, 161, 159);
-    border-radius: 5px;
-}
-
-input {
-    border-radius: 5px;
-    padding-left: 3px;
-    width: 250px;
-    padding-bottom: 4px;
-    font-size: 100%;
-} */
-
 #btn {
     background-color: rgb(8, 124, 105);
     color: rgb(236, 245, 179);
@@ -76,7 +69,6 @@ input {
     cursor: pointer;
     padding: 3px 5px;
     margin-left: 0px;
-    margin-top: 15px;
     margin-bottom: 40px;
     border-radius: 12px;
     border: 2px solid rgb(226, 230, 186);
@@ -93,12 +85,13 @@ input {
 #cathegoryDiv {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: smaller;
+    color: rgb(75, 73, 73);
 }
 
 #countries {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: medium;
-    color:black;
+    color: rgb(75, 73, 73);
     padding-top: 10px;
 }
 
@@ -116,13 +109,29 @@ li {
 
 .countrySpan {
     display: inline-block;
-    width: 30%;
+    color: rgb(75, 73, 73);
+    width: 20%;
 }
 
 .continentSpan {
     font-size: smaller;
+    color: rgb(75, 73, 73);
     display: inline-block;
-    width: 30%;
+    width: 20%;
+}
+
+.dateSpan {
+    font-size: smaller;
+    color: rgb(75, 73, 73);
+    display: inline-block;
+    width: 20%;
+}
+
+.expiredDate {
+    font-size: smaller;
+    color: red;
+    display: inline-block;
+    width: 20%;
 }
 
 .removeBtn {
