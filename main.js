@@ -40,6 +40,7 @@ const drawList = arr => {
         continentSpan.className = "continentSpan"
         continentSpan.textContent = obj.continent
         const removeBtn = document.createElement("button")
+        removeBtn.title = "Delete"
         removeBtn.className = "removeBtn"
         removeBtn.textContent = "🗑️"
         removeBtn.addEventListener("click", () => {
